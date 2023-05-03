@@ -84,9 +84,9 @@ extern PAINT Paint;
 #define BRRED 		   0XFC07
 #define GRAY  		   0X8430
 
-#define IMAGE_BACKGROUND    WHITE
-#define FONT_FOREGROUND     BLACK
-#define FONT_BACKGROUND     WHITE
+#define IMAGE_BACKGROUND    GRAY
+#define FONT_FOREGROUND     WHITE
+#define FONT_BACKGROUND     GRAY
 
 /**
  * The size of the point
