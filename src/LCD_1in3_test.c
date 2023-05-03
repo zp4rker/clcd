@@ -54,8 +54,8 @@ void LCD_1in3_test(void)
     Paint_DrawCircle(170, 35, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
     Paint_DrawCircle(170, 85, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 
-    Paint_DrawString_EN(5, 70, "hello world", &Font16, WHITE, BLACK);
-    Paint_DrawString_EN(5, 90, "waveshare", &Font20, RED, IMAGE_BACKGROUND);
+    Paint_DrawString_EN(5, 70, "hello world", &Font8, WHITE, BLACK);
+    Paint_DrawString_EN(5, 90, "waveshare", &Font12, RED, IMAGE_BACKGROUND);
 
     // Paint_DrawNum(20, 200, 123456789, &Font20, BLUE, IMAGE_BACKGROUND);
         
