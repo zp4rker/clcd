@@ -83,7 +83,6 @@ extern PAINT Paint;
 #define BROWN 		   0XBC40
 #define BRRED 		   0XFC07
 #define GRAY  		   0X8430
-#define BGCOLOUR       0x353739
 
 #define IMAGE_BACKGROUND    WHITE
 #define FONT_FOREGROUND     BLACK

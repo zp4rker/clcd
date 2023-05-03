@@ -30,8 +30,8 @@ void LCD_1in3_test(void)
         exit(0);
     }
     // /*1.Create a new image cache named IMAGE_RGB and fill it with white*/
-    Paint_NewImage(BlackImage, LCD_WIDTH, LCD_HEIGHT, 0, BGCOLOUR, 16);
-    Paint_Clear(BGCOLOUR);
+    Paint_NewImage(BlackImage, LCD_WIDTH, LCD_HEIGHT, 0, GRAY, 16);
+    Paint_Clear(GRAY);
 
     // /* GUI */
     printf("drawing...\r\n");
@@ -52,7 +52,7 @@ void LCD_1in3_test(void)
     Paint_DrawCircle(170, 35, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
     Paint_DrawCircle(170, 85, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 
-    Paint_DrawString_EN(5, 70, "hello world", &Font8, BGCOLOUR, WHITE);
+    Paint_DrawString_EN(5, 70, "hello world", &Font8, GRAY, WHITE);
     Paint_DrawString_EN(5, 90, "waveshare", &Font12, RED, WHITE);
         
     // /*3.Refresh the picture in RAM to LCD*/
