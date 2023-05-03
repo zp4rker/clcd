@@ -35,25 +35,8 @@ void LCD_1in3_test(void)
 
     // /* GUI */
     printf("drawing...\r\n");
-    // /*2.Drawing on the image*/
-    Paint_DrawPoint(5, 10, WHITE, DOT_PIXEL_1X1, DOT_STYLE_DFT);//240 240
-    Paint_DrawPoint(5, 25, WHITE, DOT_PIXEL_2X2, DOT_STYLE_DFT);
-    Paint_DrawPoint(5, 40, WHITE, DOT_PIXEL_3X3, DOT_STYLE_DFT);
-    Paint_DrawPoint(5, 55, WHITE, DOT_PIXEL_4X4, DOT_STYLE_DFT);
-
-    Paint_DrawLine(20, 10, 70, 60, RED, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
-    Paint_DrawLine(70, 10, 20, 60, RED, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
-    Paint_DrawLine(170, 15, 170, 55, RED, DOT_PIXEL_1X1, LINE_STYLE_DOTTED);
-    Paint_DrawLine(150, 35, 190, 35, RED, DOT_PIXEL_1X1, LINE_STYLE_DOTTED);
-
-    Paint_DrawRectangle(20, 10, 70, 60, BLUE, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
-    Paint_DrawRectangle(85, 10, 130, 60, BLUE, DOT_PIXEL_1X1, DRAW_FILL_FULL);
-
-    Paint_DrawCircle(170, 35, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
-    Paint_DrawCircle(170, 85, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_FULL);
-
-    Paint_DrawString_EN(5, 70, "hello world", &Font8, GRAY, WHITE);
-    Paint_DrawString_EN(5, 90, "waveshare", &Font12, RED, WHITE);
+    Paint_DrawLine(0, 210, 240, 210, WHITE, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
+    Paint_DrawString_EN(10, 10, "Hostname:\r\nIP:\r\nUptime:\r\nCPU:\r\nMemory:\r\nStorage:", &Font12, GRAY, WHITE)
         
     // /*3.Refresh the picture in RAM to LCD*/
     LCD_1in3_Display(BlackImage);
