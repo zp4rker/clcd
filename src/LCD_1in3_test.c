@@ -52,7 +52,7 @@ void LCD_1in3_test(void)
     Paint_DrawCircle(170, 35, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
     Paint_DrawCircle(170, 85, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 
-    Paint_DrawString_EN(5, 70, "hello world", &Font8, GRAY, WHITE);
+    Paint_DrawString_EN(5, 70, "hello world", &Font8, BLACK, WHITE);
     Paint_DrawString_EN(5, 90, "waveshare", &Font12, RED, WHITE);
         
     // /*3.Refresh the picture in RAM to LCD*/
