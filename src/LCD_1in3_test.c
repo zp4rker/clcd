@@ -36,7 +36,8 @@ void LCD_1in3_test(void)
     // /* GUI */
     printf("drawing...\r\n");
     Paint_DrawLine(0, 210, 240, 210, WHITE, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
-    Paint_DrawString_EN(10, 10, "Hostname:", &Font12, GRAY, WHITE);
+    Paint_DrawString_EN(10, 10, "Hostname:", &Font16, GRAY, WHITE);
+    Paint_DrawString_EN(10, 20, "IP:", &Font16, GRAY, WHITE);
         
     // /*3.Refresh the picture in RAM to LCD*/
     LCD_1in3_Display(BlackImage);
