@@ -25,23 +25,21 @@ void LCD_1in3_test(void)
     
     UWORD *BlackImage;
     UDOUBLE Imagesize = LCD_HEIGHT*LCD_WIDTH*2;
-    printf("Imagesize = %d\r\n", Imagesize);
     if((BlackImage = (UWORD *)malloc(Imagesize)) == NULL) {
         printf("Failed to apply for black memory...\r\n");
         exit(0);
     }
-    // printf("size = %d\r\n",sizeof(BlackImage) / sizeof(UWORD));
     // /*1.Create a new image cache named IMAGE_RGB and fill it with white*/
-    Paint_NewImage(BlackImage, LCD_WIDTH, LCD_HEIGHT, 0, WHITE, 16);
-    Paint_Clear(WHITE);
+    Paint_NewImage(BlackImage, LCD_WIDTH, LCD_HEIGHT, 0, BGCOLOUR, 16);
+    Paint_Clear(BGCOLOUR);
 
     // /* GUI */
     printf("drawing...\r\n");
     // /*2.Drawing on the image*/
-    Paint_DrawPoint(5, 10, BLACK, DOT_PIXEL_1X1, DOT_STYLE_DFT);//240 240
-    Paint_DrawPoint(5, 25, BLACK, DOT_PIXEL_2X2, DOT_STYLE_DFT);
-    Paint_DrawPoint(5, 40, BLACK, DOT_PIXEL_3X3, DOT_STYLE_DFT);
-    Paint_DrawPoint(5, 55, BLACK, DOT_PIXEL_4X4, DOT_STYLE_DFT);
+    Paint_DrawPoint(5, 10, WHITE, DOT_PIXEL_1X1, DOT_STYLE_DFT);//240 240
+    Paint_DrawPoint(5, 25, WHITE, DOT_PIXEL_2X2, DOT_STYLE_DFT);
+    Paint_DrawPoint(5, 40, WHITE, DOT_PIXEL_3X3, DOT_STYLE_DFT);
+    Paint_DrawPoint(5, 55, WHITE, DOT_PIXEL_4X4, DOT_STYLE_DFT);
 
     Paint_DrawLine(20, 10, 70, 60, RED, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
     Paint_DrawLine(70, 10, 20, 60, RED, DOT_PIXEL_1X1, LINE_STYLE_SOLID);
@@ -54,10 +52,8 @@ void LCD_1in3_test(void)
     Paint_DrawCircle(170, 35, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_EMPTY);
     Paint_DrawCircle(170, 85, 20, GREEN, DOT_PIXEL_1X1, DRAW_FILL_FULL);
 
-    Paint_DrawString_EN(5, 70, "hello world", &Font8, WHITE, BLACK);
-    Paint_DrawString_EN(5, 90, "waveshare", &Font12, RED, IMAGE_BACKGROUND);
-
-    // Paint_DrawNum(20, 200, 123456789, &Font20, BLUE, IMAGE_BACKGROUND);
+    Paint_DrawString_EN(5, 70, "hello world", &Font8, BGCOLOUR, WHITE);
+    Paint_DrawString_EN(5, 90, "waveshare", &Font12, RED, WHITE);
         
     // /*3.Refresh the picture in RAM to LCD*/
     LCD_1in3_Display(BlackImage);
